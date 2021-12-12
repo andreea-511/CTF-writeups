@@ -44,7 +44,7 @@ context.log_level = 'info'
 # ===========================================================
 
 # Pass in pattern_size, get back EIP/RIP offset
-offset = find_ip(cyclic(100))
+offset = find_ip(cyclic(1000))
 
 # Start program
 io = process()
