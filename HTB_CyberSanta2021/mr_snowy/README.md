@@ -2,6 +2,8 @@ The files that we got in order to solve this challenge were:
 ```
 mr_snowy          flag.txt
 ```
+We also get a hint
+> There is ❄️ snow everywhere!! Kids are playing around, everything looks amazing. But, this ☃️ snowman... it scares me.. He is always ? staring at Santa's house. Something must be wrong with him.
 ---
 ## File inspection
 
